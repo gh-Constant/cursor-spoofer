@@ -29,12 +29,6 @@ rm -rf ~/Library/Caches/Cursor
 rm -rf ~/Library/Preferences/com.cursor.Cursor.plist
 rm -rf ~/Library/Saved\ Application\ State/com.cursor.Cursor.savedState
 
-# Clear Arc browser cache and cookies for cursor.com
-echo "Clearing Arc browser data for cursor.com..."
-rm -rf ~/Library/Application\ Support/Arc/User\ Data/Default/Cookies*
-rm -rf ~/Library/Application\ Support/Arc/User\ Data/Default/Cache/*
-rm -rf ~/Library/Application\ Support/Arc/User\ Data/Default/Local\ Storage/*
-
 # Install macchanger if needed
 install_macchanger
 
