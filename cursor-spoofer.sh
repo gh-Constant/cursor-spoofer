@@ -19,6 +19,15 @@ install_macchanger() {
     fi
 }
 
+# Terminate Cursor if it's running
+if pgrep "Cursor" > /dev/null; then
+    echo "Closing Cursor application..."
+    pkill "Cursor"
+    sleep 2
+else
+    echo "Cursor is not running."
+fi
+
 # Uninstall Cursor app and remove related files
 echo "Uninstalling Cursor..."
 # Remove app from Applications
@@ -31,7 +40,6 @@ rm -rf ~/Library/Saved\ Application\ State/com.cursor.Cursor.savedState
 
 # Install macchanger if needed
 install_macchanger
-
 
 # Turn off WiFi
 echo "Turning off WiFi..."
